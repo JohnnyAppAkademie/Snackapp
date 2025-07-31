@@ -1,0 +1,35 @@
+name: jp_app
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.8.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+###################################################
+    - assets/details/cut_card.png
+    - assets/details/snack_snack.png
+###################################################
+    - assets/graphics/burger.png
+    - assets/graphics/cupcake_cat.png
+    - assets/graphics/cupcake_chick.png
+    - assets/graphics/icecream_cone.png
+    - assets/graphics/icecream_stick.png
+    - assets/graphics/icecream.png
+    - assets/graphics/star.png
+###################################################
+    - assets/background/bg_mainscreen.png
+    - assets/background/bg_startscreen.png
+###################################################

@@ -1,8 +1,8 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:jp_app/src/core/data/inner_shadow.dart';
 import 'package:jp_app/src/core/extension/media_extension.dart';
-import 'package:jp_app/src/core/utils/fancy_button.dart';
+import 'package:jp_app/src/core/style/text_style.dart';
+import 'package:jp_app/src/core/utils/button.dart';
 import 'package:jp_app/src/view/main_screen/pages/main_screen.dart';
 
 class StartMenue extends StatelessWidget {
@@ -43,23 +43,16 @@ class StartMenue extends StatelessWidget {
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    const Text(
+                    Text(
                       "Feeling Snackish Today?",
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                      ),
+                      style: header,
                       textAlign: TextAlign.center,
                     ),
                     SizedBox(height: context.screenHeight * 0.01),
                     Text(
                       "Explore Angi's most popular snack selection\nand get instantly happy",
                       textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontSize: 13,
-                        color: Colors.white.withValues(alpha: 0.75),
-                      ),
+                      style: headerSubText,
                     ),
                     SizedBox(height: context.screenHeight * 0.03),
                     SizedBox(

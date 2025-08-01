@@ -6,26 +6,33 @@ class Snack {
   get getFoodName => foodName;
   set setFoodName(foodName) => this.foodName = foodName;
 
+  /*  Kurzbeschreibung  */
+  String foodShortDescription;
+  String get getFoodShortDescription => foodShortDescription;
+  set setFoodShortDescription(String foodShortDescription) =>
+      this.foodShortDescription = foodShortDescription;
+
+  /* Beschreibung */
   String foodDescription;
-  get getFoodDescription => foodDescription;
-  set setFoodDescription(foodDescription) =>
+  String get getFoodDescription => foodDescription;
+  set setFoodDescription(String foodDescription) =>
       this.foodDescription = foodDescription;
 
   /*  Preis */
   double foodPrice;
-  get getFoodPrice => foodPrice;
-  set setFoodPrice(foodPrice) => this.foodPrice = foodPrice;
+  double get getFoodPrice => foodPrice;
+  set setFoodPrice(double foodPrice) => this.foodPrice = foodPrice;
 
   /*  Kategorie */
   List<String> category;
 
-  get getCategory => category;
-  set setCategory(category) => this.category = category;
+  List<String> get getCategory => category;
+  set setCategory(List<String> category) => this.category = category;
 
   /*  Rating  */
   double foodRating;
-  get getFoodRating => foodRating;
-  set setFoodRating(foodRating) => this.foodRating = foodRating;
+  double get getFoodRating => foodRating;
+  set setFoodRating(double foodRating) => this.foodRating = foodRating;
 
   /*  Likes */
   int foodLikes;
@@ -47,6 +54,7 @@ class Snack {
 
   Snack({
     required this.foodName,
+    required this.foodShortDescription,
     required this.foodDescription,
     required this.foodPrice,
     required this.category,
@@ -59,7 +67,7 @@ class Snack {
   String convertPriceToString() {
     String stringPrice = getFoodPrice.toStringAsFixed(2);
 
-    stringPrice = "${stringPrice.replaceAll(".", ",")} €";
+    stringPrice = "\u20B3 ${stringPrice.replaceAll(".", ",")}";
 
     return stringPrice;
   }

@@ -2,8 +2,10 @@ import 'package:jp_app/src/core/data/snack.dart';
 
 List<Snack> snackList = [
   Snack(
-    foodName: "Burger",
-    foodDescription: "__Enter Description here__",
+    foodName: "Angi's Yummy Burger",
+    foodShortDescription: "YUM YUM YUM YUM YUM YUM YUM",
+    foodDescription:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     category: ["Vegan"],
     foodPrice: 5.60,
     foodLikes: 100,
@@ -12,8 +14,10 @@ List<Snack> snackList = [
     foodFavourit: false,
   ),
   Snack(
-    foodName: "Cupcake Cat",
-    foodDescription: "__Enter Description here__",
+    foodName: "Mogli's Cup",
+    foodShortDescription: "YUM YUM YUM YUM YUM YUM YUM",
+    foodDescription:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     category: ["Sweet"],
     foodPrice: 2.50,
     foodLikes: 200,
@@ -23,7 +27,9 @@ List<Snack> snackList = [
   ),
   Snack(
     foodName: "Cupcake Chick",
-    foodDescription: "__Enter Description here__",
+    foodShortDescription: "YUM YUM YUM YUM YUM YUM YUM",
+    foodDescription:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     category: ["Sweet"],
     foodPrice: 1.50,
     foodLikes: 150,
@@ -32,8 +38,10 @@ List<Snack> snackList = [
     foodFavourit: false,
   ),
   Snack(
-    foodName: "Ice-Cream",
-    foodDescription: "__Enter Description here__",
+    foodName: "Balu's Cup",
+    foodShortDescription: "YUM YUM YUM YUM YUM YUM YUM",
+    foodDescription:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     category: ["Vegan", "Cold"],
     foodPrice: 5.60,
     foodLikes: 100,
@@ -42,8 +50,10 @@ List<Snack> snackList = [
     foodFavourit: true,
   ),
   Snack(
-    foodName: "Ice-Cream - Stick",
-    foodDescription: "__Enter Description here__",
+    foodName: "Smiling David",
+    foodShortDescription: "YUM YUM YUM YUM YUM YUM YUM",
+    foodDescription:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     category: ["Vegan", "Cold"],
     foodPrice: 5.60,
     foodLikes: 100,
@@ -52,8 +62,10 @@ List<Snack> snackList = [
     foodFavourit: false,
   ),
   Snack(
-    foodName: "Ice-Cream - Cone",
-    foodDescription: "__Enter Description here__",
+    foodName: "Kai in a Cone",
+    foodShortDescription: "YUM YUM YUM YUM YUM YUM YUM",
+    foodDescription:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     category: ["Vegan", "Cold"],
     foodPrice: 5.60,
     foodLikes: 100,

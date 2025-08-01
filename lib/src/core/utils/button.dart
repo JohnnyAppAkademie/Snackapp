@@ -1,6 +1,17 @@
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:jp_app/src/core/data/inner_shadow.dart';
+import 'package:jp_app/src/core/style/text_style.dart';
+
+class InnerShadow {
+  final Color color;
+  final double blur;
+  final Offset offset;
+
+  const InnerShadow({
+    required this.color,
+    required this.blur,
+    required this.offset,
+  });
+}
 
 class FancyGlowButton extends StatelessWidget {
   final VoidCallback onPressed;
@@ -26,9 +37,10 @@ class FancyGlowButton extends StatelessWidget {
       height: 60,
       child: Stack(
         children: [
-          // Background with glow and gradients
+          /*  Background  */
           Positioned.fill(
             child: CustomPaint(
+              /* Paints */
               painter: _FancyButtonPainter(
                 gradientBackground: gradientBackground,
                 shadow1: innerShadow1,
@@ -37,7 +49,7 @@ class FancyGlowButton extends StatelessWidget {
               ),
             ),
           ),
-          // Foreground text
+          /* Button */
           Positioned.fill(
             child: TextButton(
               onPressed: onPressed,
@@ -47,14 +59,8 @@ class FancyGlowButton extends StatelessWidget {
                 ),
                 backgroundColor: Colors.transparent,
               ),
-              child: Text(
-                text,
-                style: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                ),
-              ),
+              /* Text */
+              child: Text(text, style: buttonText),
             ),
           ),
         ],

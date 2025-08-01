@@ -1,10 +1,10 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:jp_app/src/core/data/inner_shadow.dart';
 import 'package:jp_app/src/core/data/snack.dart';
 import 'package:jp_app/src/core/extension/media_extension.dart';
-import 'package:jp_app/src/core/utils/fancy_button.dart';
+import 'package:jp_app/src/core/style/text_style.dart';
+import 'package:jp_app/src/core/utils/button.dart';
 
 class SnackDisplay extends StatefulWidget {
   const SnackDisplay({super.key, required this.snack});
@@ -66,19 +66,26 @@ class _SnackDisplayState extends State<SnackDisplay> {
                       child: Text(
                         snack.getFoodName,
                         overflow: TextOverflow.ellipsis,
+                        style: showcaseCardHeader,
                       ),
                     ),
                     /*  Sub-Title */
                     SizedBox(
                       height: 60,
-                      width: 225,
-                      child: Text(snack.getFoodDescription),
+                      width: 150,
+                      child: Text(
+                        snack.getFoodShortDescription,
+                        style: showcaseCardText,
+                      ),
                     ),
                     /*  Preis */
                     SizedBox(
                       height: 30,
                       width: 60,
-                      child: Text(snack.convertPriceToString()),
+                      child: Text(
+                        snack.convertPriceToString(),
+                        style: showcaseCardPrice,
+                      ),
                     ),
                   ],
                 ),

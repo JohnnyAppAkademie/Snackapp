@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:jp_app/src/core/data/catagory_filter.dart';
 import 'package:jp_app/src/core/extension/media_extension.dart';
 import 'package:jp_app/src/core/repository/snack_repository.dart';
+import 'package:jp_app/src/core/style/text_style.dart';
 import 'package:jp_app/src/view/main_screen/widgets/category_checkbox.dart';
 import 'package:jp_app/src/view/main_screen/widgets/recommend_display.dart';
 import 'package:jp_app/src/view/main_screen/widgets/snack_display.dart';
@@ -13,20 +15,21 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-  List<String> categories = [
-    'All Categories',
-    'Favourites',
-    'Sweet',
-    'Vegan',
-    'Cold',
-  ];
+  /*  Filter */
+  late List<CategoryFilter> filters;
 
-  late List<bool> checkedStates;
+  final horizontalPadding = const EdgeInsets.symmetric(horizontal: 10);
 
   @override
   void initState() {
     super.initState();
-    checkedStates = List<bool>.filled(categories.length, false);
+    filters = [
+      CategoryFilter(name: 'All Categories', isMainCategory: true),
+      CategoryFilter(name: 'Favourites'),
+      CategoryFilter(name: 'Sweet'),
+      CategoryFilter(name: 'Vegan'),
+      CategoryFilter(name: 'Cold'),
+    ];
   }
 
   @override
@@ -46,48 +49,69 @@ class _MainScreenState extends State<MainScreen> {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            /* Header */
+            SizedBox(height: (context.screenHeight * 0.08)),
+
+            _buildHeader(context),
+
+            SizedBox(height: (context.screenHeight * 0.02)),
+
             /*  Checkboxen  */
-            CategoryCheckbox(
-              categories: categories,
-              checkedStates: checkedStates,
-            ),
+            CategoryCheckbox(filters: filters),
+
             SizedBox(height: context.screenHeight * 0.05),
+
             /* Item Lookout */
-            SizedBox(height: 225, child: SnackDisplay(snack: snackList[0])),
+            SizedBox(height: 225, child: SnackDisplay(snack: snackList.first)),
+
             SizedBox(height: context.screenHeight * 0.04),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                  child: Text(
-                    "We Recommend",
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
-                SizedBox(height: context.screenHeight * 0.01),
-                SizedBox(
-                  height: 250,
-                  child: ListView.builder(
-                    itemCount: snackList.length,
-                    scrollDirection: Axis.horizontal,
-                    itemBuilder: (context, index) {
-                      return Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: RecommendDisplay(snack: snackList[index]),
-                      );
-                    },
-                  ),
-                ),
-              ],
-            ),
+
+            /* Recomended Items */
+            _buildRecommendations(),
           ],
         ),
       ),
+    );
+  }
+
+  Column _buildRecommendations() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Padding(
+          padding: horizontalPadding,
+          child: Text(
+            "We Recommend",
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            ),
+          ),
+        ),
+        SizedBox(height: context.screenHeight * 0.01),
+        SizedBox(
+          height: 250,
+          child: ListView.builder(
+            itemCount: snackList.length - 1,
+            scrollDirection: Axis.horizontal,
+            itemBuilder: (context, index) {
+              return Padding(
+                padding: horizontalPadding,
+                child: RecommendDisplay(snack: snackList[index + 1]),
+              );
+            },
+          ),
+        ),
+      ],
+    );
+  }
+
+  SizedBox _buildHeader(BuildContext context) {
+    return SizedBox(
+      height: 60,
+      width: context.screenWidth * 0.45,
+      child: Text("Choose your Favourite Snack", maxLines: 2, style: header),
     );
   }
 }

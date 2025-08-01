@@ -9,6 +9,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  google_fonts: ^6.1.0
 
 dev_dependencies:
   flutter_test:
@@ -32,4 +33,10 @@ flutter:
 ###################################################
     - assets/background/bg_mainscreen.png
     - assets/background/bg_startscreen.png
+###################################################
+    - assets/icons/gluten.png
+    - assets/icons/kcal.png
+    - assets/icons/lowFat.png
+    - assets/icons/lunch.png
+    - assets/icons/sugar.png
 ###################################################

@@ -7,10 +7,8 @@ class StartOutline extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      top: 525,
-      left: -225,
-      height: context.screenHeight,
-      width: context.screenWidth + 500,
+      top: context.screenHeight * 0.60,
+      right: context.screenWidth * 0.10,
       child: SizedBox(
         child: Stack(
           children: [

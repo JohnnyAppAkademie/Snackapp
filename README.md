@@ -1,3 +1,3 @@
-# jp_app
+# Snackapp
 
 A new Flutter project.
